@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swap v2 || Wufiswap v2</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="position-relative">
+        <nav class="navbar navbar-expand-xl p-0 bg-light bg-transparent d-flex justify-content-center">
+            <div class="width-93 d-flex justify-content-between">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="images/logo.png" class="img-fluid" width="100px">
+                    <span class="text-white fs-26">
+                        Wufiswap
+                    </span>
+                </a>
+                <button class="border-0 bg-transparent d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarmenu" aria-controls="sidebarmenu">
+                    <img src="images/icons/menu.png" class="img-fluid" width="35px">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="swap.html">Swap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="farm.html">Farm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Manage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="launchpad.html">Launchpad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="builders.html">Builders</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex gap-4 align-items-center ps-3" role="search">
+                        <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            connect wallet
+                        </button>
+                        <a href="https://twitter.com/Wufiswap">
+                            <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                        </a>
+                        <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                            <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- alert window start -->
+        <div class="offcanvas bg-transparent p-0 position-absolute top-50 start-50 translate-middle-x w-75 mx-auto" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="alert alert-primary text-black fs-14 border-0 bg-white" role="alert">
+                Please install DogeLabs Wallet to connect!
+            </div>
+        </div>
+        <!-- alert window end -->
+    </header>
+    <!-- mobile menu start -->
+    <div class="offcanvas offcanvas-start bg-black" data-bs-scroll="true" tabindex="-1" id="sidebarmenu" aria-labelledby="sidebarmenu">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center gap-3">
+                <img src="images/logo.png" class="img-fluid" width="80px">
+                <span class="text-white">
+                    Wufiswap
+                </span>
+            </div>
+            <button type="button" class="bg-transparent border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="images/icons/close.png" class="img-fluid" width="33px">
+            </button>
+        </div>
+        <div class="offcanvas-body py-5">
+            <ul class="navbar-nav text-center py-5 flex-column gap-3 w-100">
+                <li class="nav-item">
+                    <a class="nav-link text-white active" href="swap.html">Swap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="farm.html">Farm</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dashboard.html">Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="launchpad.html">Launchpad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="builders.html">Builders</a>
+                </li>
+            </ul>
+            <form class="d-flex flex-column gap-4 align-items-center" role="search">
+                <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    connect wallet
+                </button>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <a href="https://twitter.com/Wufiswap">
+                        <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                    </a>
+                    <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                        <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- mobile menu end -->
+
+    <main class="mt-5">
+        <div class="d-flex justify-content-center mb-5">
+            <div class="width-93">
+                <div class="row g-3 justify-content-lg-between">
+                    <div class="col-lg-12">
+                        <div class="mb-5 d-flex align-items-center flex-lg-row flex-column gap-3 justify-content-between">
+                            <div>
+                                <h1 class="fs-50 text-shadow text-white mb-3">Swap</h1>
+                                <p class="text-white fs-14">Swap any doginal token</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-3 flex-shrink-0">
+                                <!-- <div>
+                                    <input type="text" class="form-control rounded-5 searchbar bg-transparent" placeholder="Search token" name="">
+                                    <div class="d-flex align-items-center gap-2 mt-2">
+                                        <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">LP</span>
+                                        <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Staking</span>
+                                        <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Launchpad</span>
+                                    </div>
+                                </div> -->
+                                <div class="text-center">
+                                    <button class="d-flex align-items-center m-auto bg-transparent rounded-5 justify-content-center btn-plus">
+                                        <img src="images/icons/plus-w.png" class="img-fluid" width="15px">
+                                    </button>
+                                    <p class="fs-14 text-white mt-2 fst-italic">
+                                        Create Pair
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 pt-5">
+                        <div class="table-responsive table-c">
+                            <table class="table border-0 table-borderless align-middle">
+                                <thead class="text-white text-center">
+                                    <th class="pb-4">
+                                        
+                                    </th>
+                                    <th class="pb-4">
+                                        <span class="text-nowrap">Price</span>
+                                    </th>
+                                    <th class="pb-4">
+                                        <span class="text-nowrap">Change</span>
+                                    </th>
+                                    <th class="pb-4">
+                                        <span class="text-nowrap">Total volume</span>
+                                    </th>
+                                    <th class="pb-4">
+                                        <span class="text-nowrap">24H volume</span>
+                                    </th>
+                                    <th class="pb-4">
+                                        <span class="text-nowrap">Market cap.</span>
+                                    </th>
+                                    <th class="pb-4"></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center align-middle">
+                                            <span class="fs-6 fw-semibold text-white">WUFI/DOGE</span>
+                                            <div class="d-flex mt-2 w-250px align-items-center gap-2 justify-content-center">
+                                                <img src="images/im-10.png" class="img-fluid" width="65px">
+                                                <img src="images/im-11.png" class="img-fluid" width="49px">
+                                            </div>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex mt-2 w-250px justify-content-center align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold">37</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$3.69</span>
+                                        </td>
+                                        <td class=" align-middle">
+                                            <div class="mt-2 w-250px text-center">
+                                                <span class="text-green fs-6 fw-semibold">
+                                                    +24%
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold">10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold"> 10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold"> 10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle" style="width:200px">
+                                            <div class="mt-2 w-250px text-center">
+                                                <a href="transaction-history.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                                    Swap
+                                                </a>
+                                                <a href="" class="btncust height-38 text-nowrap border fs-14 text-orange fw-semibold border-color-gray rounded-5 px-4 text-decoration-none">
+                                                    Provide
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">
+                                            <span class="fs-6 fw-semibold text-white">WUFI/DOGE</span>
+                                            <div class="d-flex mt-2 w-250px align-items-center gap-2 justify-content-center">
+                                                <img src="images/im-12.png" class="img-fluid" width="49px">
+                                                <img src="images/im-11.png" class="img-fluid" width="49px">
+                                            </div>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex mt-2 w-250px justify-content-center align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold">37</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$3.69</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="mt-2 w-250px text-center">
+                                                <span class="text-green fs-6 fw-semibold">
+                                                    +24%
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold">10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold"> 10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold"> 10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle" style="width:200px">
+                                            <div class="mt-2 w-250px text-center">
+                                                <a href="transaction-history.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                                    Swap
+                                                </a>
+                                                <a href="" class="btncust height-38 text-nowrap border fs-14 text-orange fw-semibold border-color-gray rounded-5 px-4 text-decoration-none">
+                                                    Provide
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center align-middle">
+                                            <span class="fs-6 fw-semibold text-white">WUFI/DOGE</span>
+                                            <div class="d-flex mt-2 w-250px align-items-center gap-2 justify-content-center">
+                                                <img src="images/im-13.png" class="img-fluid" width="49px">
+                                                <img src="images/im-11.png" class="img-fluid" width="49px">
+                                            </div>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex mt-2 w-250px justify-content-center align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold">37</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$3.69</span>
+                                        </td>
+                                        <td class="align-middle">
+                                            <div class="mt-2 w-250px text-center">
+                                                <span class="text-orange fs-6 fw-semibold">
+                                                    -3.5%
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold">10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold"> 10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <div class="d-flex w-250px justify-content-center mt-2 align-items-start text-white gap-1 mb-1">
+                                                <div class="flex-shrink-0">
+                                                    <img src="images/im-11.png" class="img-fluid fles" width="15px">
+                                                </div>
+                                                <div>
+                                                    <span class="fs-6 fw-semibold"> 10,373,231</span>
+                                                </div>
+                                            </div>
+                                            <span class="fs-14 text-white fst-italic">$34,430.69</span>
+                                        </td>
+                                        <td class="text-center align-middle" style="width:200px">
+                                            <div class="mt-2 w-250px text-center">
+                                                <a href="transaction-history.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                                    Swap
+                                                </a>
+                                                <a href="" class="btncust height-38 text-nowrap border fs-14 text-orange fw-semibold border-color-gray rounded-5 px-4 text-decoration-none">
+                                                    Provide
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="alertmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-black border-color-gray">
+                <div class="modal-body text-center pt-5">
+                    <h1 class="text-capitalize fs-4 mb-4 text-white">complete transaction</h1>
+                    <p class="text-white lh-base">
+                        Insufficient balance, please try again with lower amount!
+                    </p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btncust text-nowrap border fs-14 text-orange fw-bold border-color-gray d-inline-flex rounded-5 px-5 text-decoration-none text-capitalize" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 4,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 6,
+                  spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>

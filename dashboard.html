@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard V2 || Doge</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .fs-21{
+            font-size: 21px;
+        }
+        .fs-24{
+          font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="position-relative">
+        <nav class="navbar navbar-expand-xl p-0 bg-light bg-transparent d-flex justify-content-center">
+            <div class="width-93 d-flex justify-content-between">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="images/logo.png" class="img-fluid" width="100px">
+                    <span class="text-white fs-26">
+                        Wufiswap
+                    </span>
+                </a>
+                <button class="border-0 bg-transparent d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarmenu" aria-controls="sidebarmenu">
+                    <img src="images/icons/menu.png" class="img-fluid" width="35px">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="swap.html">Swap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="farm.html">Farm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html">Manage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="launchpad.html">Launchpad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="builders.html">Builders</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex gap-4 align-items-center ps-3" role="search">
+                        <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            connect wallet
+                        </button>
+                        <a href="https://twitter.com/Wufiswap">
+                            <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                        </a>
+                        <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                            <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- alert window start -->
+        <div class="offcanvas bg-transparent p-0 position-absolute top-50 start-50 translate-middle-x w-75 mx-auto" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="alert alert-primary text-black fs-14 border-0 bg-white" role="alert">
+                Please install DogeLabs Wallet to connect!
+            </div>
+        </div>
+        <!-- alert window end -->
+    </header>
+    <!-- mobile menu start -->
+    <div class="offcanvas offcanvas-start bg-black" data-bs-scroll="true" tabindex="-1" id="sidebarmenu" aria-labelledby="sidebarmenu">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center gap-3">
+                <img src="images/logo.png" class="img-fluid" width="80px">
+                <span class="text-white">
+                    Wufiswap
+                </span>
+            </div>
+            <button type="button" class="bg-transparent border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="images/icons/close.png" class="img-fluid" width="33px">
+            </button>
+        </div>
+        <div class="offcanvas-body py-5">
+            <ul class="navbar-nav text-center py-5 flex-column gap-3 w-100">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="swap.html">Swap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="farm.html">Farm</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link text-white active" href="dashboard.html">Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="launchpad.html">Launchpad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="builders.html">Builders</a>
+                </li>
+            </ul>
+            <form class="d-flex flex-column gap-4 align-items-center" role="search">
+                <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    connect wallet
+                </button>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <a href="https://twitter.com/Wufiswap">
+                        <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                    </a>
+                    <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                        <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- mobile menu end -->
+    <main>
+        <section>
+            <div class="d-flex justify-content-center p-3 mt-5">
+                <div class="width-93">
+                    <div class="row g-3">
+                        <div class="col-lg-12">
+                           <div class="pb-5 mb-5">
+                              <h1 class="fs-50 text-shadow text-white">Dashboard</h1>
+                              <p class="text-white fs-14">Manage all your interactions</p>
+                           </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card dash-card-lg bg-transparent pb-2">
+                                <div class="card-header border-0 bg-transparent manag-header">
+                                    <P class="text-white fs-3 p-2 px-3 m-0">MANAGE POSITIONS</P>
+                                </div>
+                                <div class="card-body bg-transparent px-md-4 pt-4 scrolls-1">
+                                    <div class="table-responsive">
+                                        <table class="table border-0 table-borderless align-middle">
+                                            <tbody>
+                                                <tr class="dash-card-row">
+                                                    <td class="align-top text-center pad-10-14">
+                                                        <div class="w-250px mt-3">
+                                                            <p class="fs-14 text-white mb-0">
+                                                                WUFI/DOGE
+                                                            </p>
+                                                            <div class="d-flex">
+                                                                <img src="images/d-daimond-icon.png" class="img-fluid" width="85px" style="z-index: 9999;">
+                                                                <img src="images/d-icon.png" class="img-fluid" width="85px" style="margin-left: -52px;">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-top pad-10-14">
+                                                        <div class="w-250px d-flex flex-column gap-1">
+                                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                                <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-10 text-white">
+                                                                    LP                           
+                                                                </a>
+                                                                <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-10 text-white">
+                                                                    LAUNCHPAD                         
+                                                                </a>
+                                                                <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-10 text-white">
+                                                                    LAIKA                       
+                                                                </a>
+                                                            </div>
+                                                            <div class="d-flex align-items-center flex-wrap gap-1">
+                                                                <p class="d-flex align-items-center gap-2 m-0 text-white">
+                                                                    <span class="fs-12">WUFI</span>
+                                                                    <span class="fss-13">23,000</span>
+                                                                    <span class="text-gray fs-10">+12,568</span>
+                                                                </p>
+                                                                <p class="d-flex align-items-center gap-2 m-0 text-white">
+                                                                    <span class="fs-12">DOGE</span>
+                                                                    <span class="fs-13">23,000</span>
+                                                                    <span class="text-gray fs-10">-2,568</span>
+                                                                </p>
+                                                            </div>
+                                                            <p class="d-flex gap-2 m-0 text-white">
+                                                                <span class="fs-12">Pool share:</span>
+                                                                <span class="fs-12">1.34% </span>
+                                                                <span class="text-gray fs-12">$1,234</span>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="w-250px pe-3 d-flex flex-column gap-2">
+                                                            <button class="btncust height-38 text-white fs-10 btn-bg-1 bg-orange text-capitalize border-0 rounded-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                                                Provide liqudity
+                                                            </button>
+                                                            <button class="btncust height-38 text-white fs-10 btn-bg-1 bg-orange text-capitalize border-0 rounded-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                                                Remove
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4"></td>
+                                                </tr>
+                                                <tr class="dash-card-row">
+                                                    <td class="align-top text-center pad-10-14">
+                                                        <div class="w-250px mt-3">
+                                                            <p class="fs-14 text-white mb-0">
+                                                                WIWW
+                                                            </p>
+                                                            <div class="d-flex justify-content-center">
+                                                                <img src="images/d-daimond-icon.png" class="img-fluid" width="90px">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-top pad-10-14">
+                                                        <div class="w-250px d-flex flex-column gap-1">
+                                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                                <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-10 text-white">
+                                                                    STAKING                           
+                                                                </a>
+                                                                <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-10 text-white">
+                                                                    LAIKA                          
+                                                                </a>
+                                                            </div>
+                                                            <div class="d-flex align-items-center flex-wrap gap-1">
+                                                                <p class="d-flex align-items-center gap-2 m-0 text-white">
+                                                                    <span class="fs-12">WIWW</span>
+                                                                    <span class="fs-13">23,000</span>
+                                                                </p>
+                                                                <p class="d-flex align-items-center gap-2 m-0 text-white">
+                                                                    <span class="fs-12">Earnings</span>
+                                                                    <span class="fs-13">540</span>
+                                                                    <span class="fs-13">WIWW</span>
+                                                                </p>
+                                                            </div>
+                                                            <p class="d-flex align-items-center gap-3 m-0 text-white">
+                                                                <span class="fs-12">Pool share:</span>
+                                                                <span class="fs-12">1.34% </span>
+                                                                <span class="text-gray fs-12">$1,234</span>
+                                                            </p>
+                                                            <p class="d-flex gap-3 m-0 text-white">
+                                                                <span class="fs-12">End date:</span>
+                                                                <span class="fs-12">1.34% </span>
+                                                                <span class="text-gray fs-12">03.31.24</span>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center pad-10-14">
+                                                        <div class="w-250px pe-3 d-flex flex-column gap-2">
+                                                            <button class="btncust height-38 text-white fs-10 btn-bg-1 bg-orange text-capitalize border-0 rounded-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                                                Provide liqudity
+                                                            </button>
+                                                            <button class="btncust height-38 text-white fs-10 btn-bg-1 bg-orange text-capitalize border-0 rounded-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                                                Remove
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4"></td>
+                                                </tr>
+                                                <tr class="dash-card-row">
+                                                    <td class="align-top text-center pad-10-14">
+                                                        <div class="w-250px mt-3">
+                                                            <p class="fs-14 text-white mb-0">
+                                                                DOGEMAPS
+                                                            </p>
+                                                            <div class="d-flex justify-content-center">
+                                                                <img src="images/d-daimond-icon.png" class="img-fluid" width="90px">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-top pad-10-14">
+                                                        <div class="w-250px d-flex flex-column gap-1">
+                                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                                <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-10 text-white">
+                                                                    LAIKA                      
+                                                                </a>
+                                                            </div>
+                                                            <div class="d-flex align-items-center flex-wrap gap-1">
+                                                                <p class="d-flex align-items-center gap-2 m-0 text-white">
+                                                                    <span class="fs-12">DOGEMAPS</span>
+                                                                    <span class="fs-13">23</span>
+                                                                    <span class="text-gray fs-10">+12,568</span>
+                                                                </p>
+                                                                <p class="d-flex align-items-center gap-2 m-0 text-white">
+                                                                    <span class="fs-12">DOGE</span>
+                                                                    <span class="fs-13">23,000</span>
+                                                                    <span class="text-gray fs-10">-2,568</span>
+                                                                </p>
+                                                            </div>
+                                                            <p class="d-flex align-items-center gap-3 m-0 text-white">
+                                                                <span class="fs-12">Pool share:</span>
+                                                                <span class="fs-12">1.34% </span>
+                                                                <span class="text-gray fs-12">$1,234</span>
+                                                            </p>
+                                                            <p class="d-flex gap-3 m-0 text-white">
+                                                                <span class="fs-12">End date:</span>
+                                                                <span class="fs-12">03.31.24</span>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center pad-10-14">
+                                                        <div class="w-250px pe-3 d-flex flex-column gap-2">
+                                                            <button class="btncust height-38 text-white fs-10 btn-bg-1 bg-orange text-capitalize border-0 rounded-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                                                Provide liqudity
+                                                            </button>
+                                                            <button class="btncust height-38 text-white fs-10 btn-bg-1 bg-orange text-capitalize border-0 rounded-5"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                                                Remove
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="card card-top-borders dash-sm-card bg-transparent">
+                                        <div class="card-header d-flex justify-content-between align-items-center border-0 bg-transparent dash-sm-card-header p-0 d-flex">
+                                            <div class="half-header w-60 p-3 flex-grow-1">
+                                                <P class="text-orange fs-26 m-0 px-md-3">SPUTNIK I</P>
+                                            </div>
+                                            <div class="ps-md-2 w-40 flex-grow-1">
+                                                <p class="text-white fs-26 px-sm-p m-0">4,966 LAIKA</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-body py-4 text-white pt-5">
+                                            <div class="scrolls px-md-5">
+                                                <div class="d-flex justify-content-between p-md-3">
+                                                    <p class="fs-17 mb-0">Swapping</p>
+                                                    <p class="fs-17 mb-0">725 LAIKA</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between p-md-3">
+                                                    <p class="fs-17 mb-0 me-sm-2">Providing</p>
+                                                    <p class="fs-17 mb-0">420 LAIKA</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between p-md-3">
+                                                    <p class="fs-17 mb-0 me-sm-2">Stacking</p>
+                                                    <p class="fs-17 mb-0">980 LAIKA</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between p-md-3">
+                                                    <p class="fs-17 mb-0 me-sm-2">Referring</p>
+                                                    <p class=" fs-17 mb-0">821 LAIKA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card card-top-borders dash-sm-card bg-transparent">
+                                        <div class="card-header border-0 bg-transparent dash-sm-card-header p-0">
+                                            <div class="half-header w-54 p-3">
+                                                <P class="text-white fs-26 m-0 px-md-3">LAUNCHPAD</P>
+                                            </div>
+                                        </div>
+                                        <div class="card-body text-white py-4 ps-md-5 scrolls">
+                                            <div class="row align-items-center g-3 mb-3">
+                                                <div class="col-6">
+                                                    <span class="d-flex align-items-center gap-4 fs-20">
+                                                        <img src="./images/im-9.png" class="img-fluid" width="65px">
+                                                        <span class="fs-17">LAIKA</span>
+                                                    </span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-20 m-0">Registered</p>
+                                                </div>
+                                            </div>
+                                            <div class="row align-items-center g-3 mb-3">
+                                                <div class="col-6">
+                                                    <span class="d-flex align-items-center gap-4 fs-20">
+                                                        <img src="./images/launchpad.png" class="img-fluid" width="65px">
+                                                        <span class="fs-17">WIWW</span>
+                                                    </span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <p class="fs-20 m-0">Participated</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer border-0 bg-transparent py-4 text-center">
+                                            <div class="d-inline-flex ">
+                                                <button class="earn-more w-100 px-5 bg-transparent border-0 btncust text-white">Register</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mt-5">
+                                <h3 class="text-white fs-3 fw-semibold mb-4">Transaction history</h3>
+                                <div class="table-responsive">
+                                    <table class="table align-middle">
+                                        <thead class="text-white">
+                                            <th class="pb-3">
+                                                <span class="text-nowrap fw-semibold">Action</span>
+                                            </th>
+                                            <th>
+                                                <span class="text-nowrap fw-semibold">WUFI</span>
+                                            </th>
+                                            <th>
+                                                <span class="text-nowrap fw-semibold">DOGE</span>
+                                            </th>
+                                            <th>
+                                                <span class="text-nowrap fw-semibold">Price</span>
+                                            </th>
+                                            <th>
+                                                <span class="text-nowrap fw-semibold">Date</span>
+                                            </th>
+                                            <th>
+                                                <span class="text-nowrap fw-semibold">TxID</span>
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-bottom border-white">
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        Buy
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        1,000
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        1,000
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        Đ 1.4
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        21.02 2:23 
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        Link
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="border-bottom border-white">
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        Buy
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        1,000
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        1,000
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        Đ 1.4
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        21.02 2:23 
+                                                    </span>
+                                                </td>
+                                                <td style="width:200px" class="py-3">
+                                                    <span class="fs-14 text-white">
+                                                        Link
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- js area -->
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

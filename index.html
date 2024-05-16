@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home v2 || Wufiswap v2</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="position-relative">
+        <nav class="navbar navbar-expand-xl p-0 bg-light bg-transparent d-flex justify-content-center">
+            <div class="width-93 d-flex justify-content-between">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="images/logo.png" class="img-fluid" width="100px">
+                    <span class="text-white fs-26">
+                        Wufiswap
+                    </span>
+                </a>
+                <button class="border-0 bg-transparent d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarmenu" aria-controls="sidebarmenu">
+                    <img src="images/icons/menu.png" class="img-fluid" width="35px">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="swap.html">Swap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="farm.html">Farm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Manage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="launchpad.html">Launchpad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="builders.html">Builders</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex gap-4 align-items-center ps-3" role="search">
+                        <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            connect wallet
+                        </button>
+                        <a href="https://twitter.com/Wufiswap">
+                            <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                        </a>
+                        <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                            <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- alert window start -->
+        <div class="offcanvas bg-transparent p-0 position-absolute top-50 start-50 translate-middle-x w-75 mx-auto" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="alert alert-primary text-black fs-14 border-0 bg-white" role="alert">
+                Please install DogeLabs Wallet to connect!
+            </div>
+        </div>
+        <!-- alert window end -->
+    </header>
+    <!-- mobile menu start -->
+    <div class="offcanvas offcanvas-start bg-black" data-bs-scroll="true" tabindex="-1" id="sidebarmenu" aria-labelledby="sidebarmenu">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center gap-3">
+                <img src="images/logo.png" class="img-fluid" width="80px">
+                <span class="text-white">
+                    Wufiswap
+                </span>
+            </div>
+            <button type="button" class="bg-transparent border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="images/icons/close.png" class="img-fluid" width="33px">
+            </button>
+        </div>
+        <div class="offcanvas-body py-5">
+            <ul class="navbar-nav text-center py-5 flex-column gap-3 w-100">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="swap.html">Swap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="farm.html">Farm</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dashboard.html">Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="launchpad.html">Launchpad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="builders.html">Builders</a>
+                </li>
+            </ul>
+            <form class="d-flex flex-column gap-4 align-items-center" role="search">
+                <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    connect wallet
+                </button>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <a href="https://twitter.com/Wufiswap">
+                        <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                    </a>
+                    <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                        <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- mobile menu end -->
+    <main>
+        <div class="d-flex justify-content-center mb-5">
+            <div class="width-93">
+                <div class="row">
+                    <div class="col-lg-12 text-end">
+                        <div class="bg-glass-1 p-3 rounded-5 d-inline-flex align-items-center justify-content-end gap-4">
+                            <div class="text-end">
+                                <p class="text-orange fs-14 m-0 fw-semibold">Sputnik program</p>
+                                <h5 class="text-white my-1 fs-6 fw-semibold">Swap, provide liquidity, stake</h5>
+                                <p class="m-0 text-white fs-14 fw-normal fst-italic">to earn LAIKA points</p>
+                            </div>
+                            <div>
+                                <a href="#" class="btncust d-inline-flex text-uppercase rounded-5 px-4 bg-glass-2 text-white text-decoration-none">
+                                    earn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <div class="text-center">
+                                <img src="images/gif.gif" class="img-fluid" width="250px">
+                            </div>
+                            <div class=" d-flex flex-column justify-content-center gap-3">
+                                <h1 class="fs-44 text-white">The first DEX on Doge</h1>
+                                <p class="text-white fs-6 lh-base">Unleash the power of DogFi </p>
+                                <div class="mt-2">
+                                    <a href="swap.html" class="btncust d-inline-flex rounded-5 px-4 btn-bg-1 text-white h-59 w-auto text-decoration-none">
+                                        Launch app
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mb-5">
+            <div class="width-93">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="swiper mySwiper py-4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-1.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-2.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-3.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center" style="margin-top: -20px;">
+                                        <img src="images/im-10.png" class="img-fluid" width="200px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-4.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-5.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-6.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-7.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-8.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-9.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-11.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-12.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-13.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="text-center">
+                                        <img src="images/im-14.png" class="img-fluid" width="140px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-button-next arrow-c"></div>
+                            <div class="swiper-button-prev arrow-c"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- js area -->
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- custom js -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        autoplay: true,
+        loop:true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 50,
+            },
+        },
+    });
+    </script>
+</body>
+
+</html>

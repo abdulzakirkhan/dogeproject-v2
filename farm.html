@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Farm v2 || Wufiswap v2</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="position-relative">
+        <nav class="navbar navbar-expand-xl p-0 bg-light bg-transparent d-flex justify-content-center">
+            <div class="width-93 d-flex justify-content-between">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="images/logo.png" class="img-fluid" width="100px">
+                    <span class="text-white fs-26">
+                        Wufiswap
+                    </span>
+                </a>
+                <button class="border-0 bg-transparent d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarmenu" aria-controls="sidebarmenu">
+                    <img src="images/icons/menu.png" class="img-fluid" width="35px">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="swap.html">Swap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="farm.html">Farm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Manage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="launchpad.html">Launchpad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="builders.html">Builders</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex gap-4 align-items-center ps-3" role="search">
+                        <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            connect wallet
+                        </button>
+                        <a href="https://twitter.com/Wufiswap">
+                            <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                        </a>
+                        <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                            <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- alert window start -->
+        <div class="offcanvas bg-transparent p-0 position-absolute top-50 start-50 translate-middle-x w-75 mx-auto" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="alert alert-primary text-black fs-14 border-0 bg-white" role="alert">
+                Please install DogeLabs Wallet to connect!
+            </div>
+        </div>
+        <!-- alert window end -->
+    </header>
+    <!-- mobile menu start -->
+    <div class="offcanvas offcanvas-start bg-black" data-bs-scroll="true" tabindex="-1" id="sidebarmenu" aria-labelledby="sidebarmenu">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center gap-3">
+                <img src="images/logo.png" class="img-fluid" width="80px">
+                <span class="text-white">
+                    Wufiswap
+                </span>
+            </div>
+            <button type="button" class="bg-transparent border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="images/icons/close.png" class="img-fluid" width="33px">
+            </button>
+        </div>
+        <div class="offcanvas-body py-5">
+            <ul class="navbar-nav text-center py-5 flex-column gap-3 w-100">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="swap.html">Swap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active" href="farm.html">Farm</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dashboard.html">Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="launchpad.html">Launchpad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="builders.html">Builders</a>
+                </li>
+            </ul>
+            <form class="d-flex flex-column gap-4 align-items-center" role="search">
+                <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    connect wallet
+                </button>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <a href="https://twitter.com/Wufiswap">
+                        <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                    </a>
+                    <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                        <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- mobile menu end -->
+    <main class="mt-5">
+        <div class="d-flex justify-content-center mb-5">
+            <div class="width-93">
+                <div class="row g-3">
+                    <div class="col-lg-12">
+                        <div class="mb-5 d-flex align-items-center flex-lg-row flex-column gap-3 justify-content-between">
+                            <div>
+                                <h1 class="fs-50 text-shadow text-white mb-3">Farm</h1>
+                                <p class="text-white fs-14">Put your assets at work</p>
+                            </div>
+                            <div class="d-flex gap-3 flex-shrink-0">
+                                <div>
+                                    <input type="text" class="form-control rounded-5 searchbar bg-transparent" placeholder="Search token" name="">
+                                    <div class="d-flex align-items-center justify-content-center gap-2 mt-2 flex-wrap w-200">
+                                        <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">
+                                            LP
+                                        </a>
+                                        <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">
+                                            Staking
+                                        </a>
+                                        <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">
+                                            NFT
+                                        </a>
+                                        <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">
+                                            Launchpad
+                                        </a>
+                                        <a href="" class="text-decoration-none d-inline-block bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">
+                                            Launchpad
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="d-flex align-items-center m-auto bg-transparent rounded-5 p-3 justify-content-center btn-plus">
+                                        <img src="images/icons/plus-w.png" class="img-fluid" width="15px">
+                                    </button>
+                                    <p class="fs-14 text-white mt-2 fst-italic">
+                                        Create Pair
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4 pt-5">
+                        <div class="card border-0 bg-card-glass mx-xl-5">
+                            <div class="card-body p-sm-4">
+                                <form class="row g-4 justify-content-center">
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/im-10.png" class="img-fluid" width="70px">
+                                                <img src="images/im-11.png" class="img-fluid" width="50px" style="margin-left: -20px;">
+                                            </div>
+                                            <div class="text-end">
+                                                <p class="text-white fs-14">
+                                                    WUFI-DOGE
+                                                </p>
+                                                <div class="d-flex align-items-center gap-2 mt-2">
+                                                    <span class="bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">Launchpad</span>
+                                                    <span class="bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">LP</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <p class="fs-14 m-0 text-white">
+                                                APR:
+                                            </p>
+                                            <p class="fs-14 text-white fw-semibold m-0">
+                                                12.9%
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <p class="fs-14 m-0 text-white">
+                                                Earn:
+                                            </p>
+                                            <p class="fs-14 text-white fw-semibold m-0">
+                                                DOGE
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="text-center">
+                                            <a href="#providemodal" data-bs-toggle='modal' class="btncust px-4 text-white btn-bg-1 bg-glass-1-size h-59 text-capitalize border-0 text-nowrap rounded-5 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                                Provide liqudity
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mt-4 collapse show" id="collcard1">
+                                        <div class="row g-3">
+                                            <div class="col-lg-12">
+                                                <h5 class="text-white fw-semibold m-0">Liquidity</h5>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <p class="fs-14 m-0 text-white">
+                                                        WUFI
+                                                    </p>
+                                                    <p class="fs-14 text-white fw-semibold m-0">
+                                                        123,820
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <p class="fs-14 m-0 text-white">
+                                                        DOGE
+                                                    </p>
+                                                    <p class="fs-14 text-white fw-semibold m-0">
+                                                        153,342
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer bg-transparent border-white py-3 mx-4 text-center">
+                                <button type="button" class="bg-transparent fs-14 fw-semibold text-white border-0 d-flex align-items-center justify-content-center w-100 gap-3 arrowdown-arr" data-bs-toggle='collapse' data-bs-target='#collcard1'>
+                                    <span class="textchn">Hide</span>
+                                    <span class="myArrow1 active">
+                                        <img src="images/icons/arrow-up.png" class="img-fluid" width="20px">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4 pt-5">
+                        <div class="card border-0 bg-card-glass mx-xl-5">
+                            <div class="card-body p-sm-4">
+                                <form class="row g-4 justify-content-center">
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/launchpad.png" class="img-fluid" width="50px">
+                                            </div>
+                                            <div class="text-end">
+                                                <p class="text-white fs-14">
+                                                    WIWW
+                                                </p>
+                                                <div class="d-flex align-items-center gap-2 mt-2">
+                                                    <span class="bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">Staking</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <p class="fs-14 m-0 text-white">
+                                                APR:
+                                            </p>
+                                            <p class="fs-14 text-white fw-semibold m-0">
+                                                21.4%
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <p class="fs-14 m-0 text-white">
+                                                Earn:
+                                            </p>
+                                            <p class="fs-14 text-white fw-semibold m-0">
+                                                WIWW
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="text-center">
+                                            <a href="#stackingmodal" data-bs-toggle='modal' class="btncust px-5 text-white btn-bg-1 text-capitalize border-0 rounded-5 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                                Stake
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mt-5 pt-4 collapse show" id="collcard2">
+                                        <div class="row g-3">
+                                            <div class="col-lg-12">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <p class="fs-14 m-0 text-white">
+                                                        Total reward
+                                                    </p>
+                                                    <p class="fs-14 text-white fw-semibold d-flex align-items-center gap-2 m-0">
+                                                        <span>
+                                                            <img src="images/launchpad.png" class="img-fluid" width="20px">
+                                                        </span>
+                                                        <span>
+                                                            104,450
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <p class="fs-14 m-0 text-white">
+                                                        Duration
+                                                    </p>
+                                                    <p class="fs-14 text-white fw-semibold m-0">
+                                                        20 FEB - 20 MAR
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer bg-transparent border-white py-3 mx-4 text-center">
+                                <button type="button" class="bg-transparent fs-14 fw-semibold text-white border-0 d-flex align-items-center justify-content-center w-100 gap-3 arrowdown-arr" data-bs-toggle='collapse' data-bs-target='#collcard2'>
+                                    <span class="textchn">Hide</span>
+                                    <span class="myArrow1 active">
+                                        <img src="images/icons/arrow-up.png" class="img-fluid" width="20px">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-4 pt-5">
+                        <div class="card border-0 bg-card-glass mx-xl-5">
+                            <div class="card-body p-sm-4">
+                                <form class="row g-4 justify-content-center">
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/card-3.png" class="img-fluid" width="50px">
+                                            </div>
+                                            <div class="text-end">
+                                                <p class="text-white fs-14">
+                                                    WIWW
+                                                </p>
+                                                <div class="d-flex align-items-center gap-2 mt-2">
+                                                    <span class="bg-orange-3 rounded-5 pad-10-14 fs-14 text-white">LP</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <p class="fs-14 m-0 text-white">
+                                                APR:
+                                            </p>
+                                            <p class="fs-14 d-flex align-items-center gap-2 text-white fw-semibold m-0">
+                                                <span>
+                                                    <img src="images/chart.png" class="img-fluid" width="20px">
+                                                </span>
+                                                <span>
+                                                    112.9%
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <p class="fs-14 m-0 text-white">
+                                                Earn:
+                                            </p>
+                                            <p class="fs-14 text-white fw-semibold m-0">
+                                                2x ARES
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="text-center">
+                                            <a href="#unstakemodal" data-bs-toggle='modal' class="btncust px-4 text-white btn-bg-1 text-capitalize border-0 rounded-5 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                                Provide liqudity
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mt-5 pt-4 collapse show" id="collcard3">
+                                        <div class="row g-3">
+                                            <div class="col-lg-12">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <p class="fs-14 m-0 text-white">
+                                                        Total reward
+                                                    </p>
+                                                    <p class="fs-14 text-white fw-semibold d-flex align-items-center gap-2 m-0">
+                                                        <span>
+                                                            <img src="images/launchpad.png" class="img-fluid" width="20px">
+                                                        </span>
+                                                        <span>
+                                                            104,450
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <p class="fs-14 m-0 text-white">
+                                                        Duration
+                                                    </p>
+                                                    <p class="fs-14 text-white fw-semibold m-0">
+                                                        20 FEB - 20 MAR
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer bg-transparent border-white py-3 mx-4 text-center">
+                                <button type="button" class="bg-transparent fs-14 fw-semibold text-white border-0 d-flex align-items-center justify-content-center w-100 gap-3 arrowdown-arr" data-bs-toggle='collapse' data-bs-target='#collcard3'>
+                                    <span class="textchn">Hide</span>
+                                    <span class="myArrow1 active">
+                                        <img src="images/icons/arrow-up.png" class="img-fluid" width="20px">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- js area -->
+    <div class="modal fade" id="alertmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-black border-color-gray">
+                <div class="modal-body text-center pt-5">
+                    <h1 class="text-capitalize fs-4 mb-4 text-white">complete transaction</h1>
+                    <p class="text-white lh-base">
+                        Insufficient balance, please try again with lower amount!
+                    </p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btncust text-nowrap border fs-14 text-orange fw-bold border-color-gray d-inline-flex rounded-5 px-5 text-decoration-none text-capitalize" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- stacking modal -->
+    <div class="modal fade bg-transparent" id="stackingmodal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+        <div class="modal-dialog bg-transparent">
+            <div class="modal-content bg-transparent">
+                <div class="modal-body bg-transparent ">
+                    <div class="card border-0 modal-bg-card">
+                        <div class="card-body p-sm-4">
+                            <form class="row g-3 justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/logo.png" class="img-fluid" width="77px">
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="text-white fs-14">
+                                                WUFI
+                                            </p>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Staking</span>
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Laika</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <p class="fs-14 text-light-ind">
+                                            Chose a transfer already inscribed or tap the amount you want to swap
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center gap-2 justify-content-end">
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            100
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            500
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            1500
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <div class="input-group bg-input-glass">
+                                            <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                <div class="dropdown dropcust">
+                                                    <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                        <img src="images/logo.png" class="img-fluid" width="22px" id="selectedItemImage">
+                                                        <span class="fs-14 text-white" id="imageDropdown">WUFI</span>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                            <input type="text" class="form-control text-end text-white fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                        </div>
+                                        <p class="fs-14 text-light-ind mt-2 text-end">
+                                            Not transferable: 500
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 my-3">
+                                        <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                            Services fees
+                                        </p>
+                                        <p class="fs-14 text-white fw-semibold m-0">
+                                            0 DOGE
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <a href="swap.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size h-59 text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                            Stake
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- providing modal -->
+    <div class="modal fade bg-transparent" id="providemodal" tabindex="-1" aria-labelledby="exampleModal1" aria-hidden="true">
+        <div class="modal-dialog bg-transparent">
+            <div class="modal-content bg-transparent">
+                <div class="modal-body bg-transparent ">
+                    <div class="card border-0 modal-bg-card">
+                        <div class="card-body p-sm-4">
+                            <form class="row g-4 justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/logo.png" class="img-fluid" width="70px">
+                                            <img src="images/im-11.png" class="img-fluid" width="50px" style="margin-left: -12px;">
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="text-white fs-14">
+                                                WUFI-DOGE
+                                            </p>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Launchpad</span>
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">LP</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <p class="fs-14 text-light-ind">
+                                            Chose a transfer already inscribed or tap the amount you want to swap
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center gap-2 justify-content-end">
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            100
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            500
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            1500
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <div class="input-group bg-input-glass">
+                                            <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                <div class="dropdown dropcust">
+                                                    <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                        <img src="images/logo.png" class="img-fluid" width="22px" id="selectedItemImage">
+                                                        <span class="fs-14 text-white" id="imageDropdown">WUFI</span>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                            <input type="text" class="form-control text-white text-end fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                        </div>
+                                        <p class="fs-14 text-light-ind mt-2 text-end">
+                                            Not transferable: 500
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <div class="input-group bg-input-glass">
+                                            <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                <div class="dropdown dropcust">
+                                                    <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                        <img src="images/im-11.png" class="img-fluid" width="16px" id="selectedItemImage">
+                                                        <span class="fs-14 text-white" id="imageDropdown">DOGE</span>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                            <input type="text" class="form-control text-white text-end fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                        </div>
+                                        <p class="fs-14 text-light-ind mt-2 text-end">
+                                            Available: 1,200
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 my-3">
+                                        <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                            Services fees
+                                        </p>
+                                        <p class="fs-14 text-white fw-semibold m-0">
+                                            0 DOGE
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <a href="swap.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size h-59 text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                            Provide
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- unstack modal -->
+    <div class="modal fade bg-transparent" id="unstakemodal" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+        <div class="modal-dialog bg-transparent">
+            <div class="modal-content bg-transparent">
+                <div class="modal-body bg-transparent ">
+                    <div class="card border-0 modal-bg-card">
+                        <div class="card-body p-sm-4">
+                            <form class="row g-3 justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/logo.png" class="img-fluid" width="77px">
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="text-white fs-14">
+                                                WUFI-DOGE
+                                            </p>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Stacking</span>
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Laika</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <div class="input-group bg-input-glass">
+                                            <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                <div class="dropdown dropcust">
+                                                    <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                        <img src="images/logo.png" class="img-fluid" width="22px" id="selectedItemImage">
+                                                        <span class="fs-14 text-white" id="imageDropdown">WUFI</span>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                            <input type="text" class="form-control text-white text-end fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                        </div>
+                                        <p class="fs-14 text-light-ind mt-2 text-end">
+                                            Removable: 54,203
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center gap-2 justify-content-end">
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            25%
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            50%
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            100%
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 my-3">
+                                        <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                            Services fees
+                                        </p>
+                                        <p class="fs-14 text-white fw-semibold m-0">
+                                            1 DOGE
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <a href="swap.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size h-59 text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                            Unstake
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- removing modal -->
+    <div class="modal fade bg-transparent" id="removemodal" tabindex="-1" aria-labelledby="exampleModal1" aria-hidden="true">
+        <div class="modal-dialog bg-transparent">
+            <div class="modal-content bg-transparent">
+                <div class="modal-body bg-transparent ">
+                    <div class="card border-0 modal-bg-card">
+                        <div class="card-body p-sm-4">
+                            <form class="row g-4 justify-content-center">
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                        <div class="d-flex align-items-center">
+                                            <img src="images/logo.png" class="img-fluid" width="77px">
+                                            <img src="images/im-4.png" class="img-fluid" width="50px" style="margin-left: -12px;">
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="text-white fs-14">
+                                                WUFI-DOGE
+                                            </p>
+                                            <div class="d-flex align-items-center gap-2 mt-2">
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">Launchpad</span>
+                                                <span class="bg-orange-3 rounded-5 p-2 fs-14 text-white">LP</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <div class="input-group bg-input-glass">
+                                            <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                <div class="dropdown dropcust">
+                                                    <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                        <img src="images/logo.png" class="img-fluid" width="22px" id="selectedItemImage">
+                                                        <span class="fs-14 text-white" id="imageDropdown">WUFI</span>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                            <input type="text" class="form-control text-white text-end fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                        </div>
+                                        <p class="fs-14 text-light-ind mt-2 text-end">
+                                            Removeable: 54,203
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center gap-2 justify-content-end">
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            25%
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            50%
+                                        </button>
+                                        <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                            100%
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <div class="input-group bg-input-glass">
+                                            <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                <div class="dropdown dropcust">
+                                                    <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                        <img src="images/im-4.png" class="img-fluid" width="22px" id="selectedItemImage">
+                                                        <span class="fs-14 text-white" id="imageDropdown">DOGE</span>
+                                                    </button>
+                                                </div>
+                                            </span>
+                                            <input type="text" class="form-control text-end fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                        </div>
+                                        <p class="fs-14 text-light-ind mt-2 text-end">
+                                            Removeable: 54,203
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 my-3">
+                                        <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                            Services fees
+                                        </p>
+                                        <p class="fs-14 text-white fw-semibold m-0">
+                                            1 DOGE
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-center">
+                                        <a href="swap.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size h-59 text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                            Remove
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- custom js -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 50,
+            },
+        },
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        let arrobtn = document.querySelectorAll('.arrowdown-arr');
+        let textchange = document.querySelectorAll('.textchn')
+        arrobtn.forEach(arrowb => {
+            arrowb.addEventListener('click', function() {
+                this.classList.toggle('active');
+                let textchange = this.parentElement.querySelector('.textchn');
+                if (textchange.innerHTML === 'Hide') {
+                    textchange.innerHTML = 'Details';
+                } else {
+                    textchange.innerHTML = 'Hide';
+                }
+            });
+        })
+    })
+    </script>
+</body>
+
+</html>

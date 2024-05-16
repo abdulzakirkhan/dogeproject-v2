@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transaction History v2 || Wufiswap v2</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="position-relative">
+        <nav class="navbar navbar-expand-xl p-0 bg-light bg-transparent d-flex justify-content-center">
+            <div class="width-93 d-flex justify-content-between">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="images/logo.png" class="img-fluid" width="100px">
+                    <span class="text-white fs-26">
+                        Wufiswap
+                    </span>
+                </a>
+                <button class="border-0 bg-transparent d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarmenu" aria-controls="sidebarmenu">
+                    <img src="images/icons/menu.png" class="img-fluid" width="35px">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="swap.html">Swap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="farm.html">Farm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Manage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="launchpad.html">Launchpad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="builders.html">Builders</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex gap-4 align-items-center ps-3" role="search">
+                        <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            connect wallet
+                        </button>
+                        <a href="https://twitter.com/Wufiswap">
+                            <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                        </a>
+                        <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                            <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- alert window start -->
+        <div class="offcanvas bg-transparent p-0 position-absolute top-50 start-50 translate-middle-x w-75 mx-auto" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="alert alert-primary text-black fs-14 border-0 bg-white" role="alert">
+                Please install DogeLabs Wallet to connect!
+            </div>
+        </div>
+        <!-- alert window end -->
+    </header>
+    <!-- mobile menu start -->
+    <div class="offcanvas offcanvas-start bg-black" data-bs-scroll="true" tabindex="-1" id="sidebarmenu" aria-labelledby="sidebarmenu">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center gap-3">
+                <img src="images/logo.png" class="img-fluid" width="80px">
+                <span class="text-white">
+                    Wufiswap
+                </span>
+            </div>
+            <button type="button" class="bg-transparent border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="images/icons/close.png" class="img-fluid" width="33px">
+            </button>
+        </div>
+        <div class="offcanvas-body py-5">
+            <ul class="navbar-nav text-center py-5 flex-column gap-3 w-100">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="swap.html">Swap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="farm.html">Farm</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dashboard.html">Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="launchpad.html">Launchpad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="builders.html">Builders</a>
+                </li>
+            </ul>
+            <form class="d-flex flex-column gap-4 align-items-center" role="search">
+                <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    connect wallet
+                </button>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <a href="https://twitter.com/Wufiswap">
+                        <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                    </a>
+                    <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                        <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- mobile menu end -->
+    <main class="mt-5">
+        <div class="d-flex justify-content-center mb-5">
+            <div class="width-93">
+                <div class="row g-3 justify-content-lg-between">
+                    <div class="col-lg-7 col-xl-8">
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/logo.png" class="img-fluid" width="34px">
+                                    <img src="images/im-11.png" class="img-fluid" width="24px" style="margin-left: -12px;">
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <p class="fs-14 m-0 text-white fw-semibold d-flex align-items-center" id="swap">
+                                        <span>
+                                            WUFI
+                                        </span>
+                                        <span>/</span>
+                                        <span>
+                                            DOGE
+                                        </span>
+                                    </p>
+                                    <button type="button" class="bg-transparent border-0" onclick="MyRefresh()">
+                                        <img src="images/icons/refresh.png" class="img-fluid" width="24px">
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="text-white fs-14">
+                                Liquidity: 30,000$
+                            </p>
+                        </div>
+                        <div class="my-5 d-flex align-items-center flex-lg-row flex-column gap-3 justify-content-between">
+                            <div class="ms-4">
+                                <h1 class="fs-50 text-shadow text-white">2.14 DOGE</h1>
+                                <p class="text-white fs-14">
+                                    <span class="text-light-green fw-semibold">+12%</span>
+                                    <span>Past 24 Hours</span>
+                                </p>
+                            </div>
+                            <div class="tags flex-shrink-0">
+                                <ul class="list-unstyled ps-0 navbar-nav flex-row gap-1">
+                                    <li>
+                                        <button class="border-0 rounded-3 active">
+                                            24H
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="border-0 rounded-3">
+                                            1W
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="border-0 rounded-3">
+                                            1M
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="chartdiv" style="height: 400px" class="w-100"></div>
+                    </div>
+                    <div class="col-lg-5 col-xl-4">
+                        <div class="card border-0 bg-card-glass">
+                            <div class="card-body p-sm-4">
+                                <form class="row g-3 justify-content-center">
+                                    <div class="col-lg-12">
+                                        <div>
+                                            <p class="fs-14 text-light-ind mb-1">
+                                                Chose a transfer already inscribed or tap the amount you want to swap
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center gap-2 justify-content-end">
+                                            <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                                100
+                                            </button>
+                                            <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                                500
+                                            </button>
+                                            <button class="border-0 btn-glass-sm-1 bg-transparent text-white fw-semibold p-2 px-3 rounded-5">
+                                                1500
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div>
+                                            <div class="input-group bg-input-glass">
+                                                <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                    <div class="dropdown dropcust">
+                                                        <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                            <img src="images/logo.png" class="img-fluid" width="22px" id="selectedItemImage">
+                                                            <span class="fs-14 text-white" id="imageDropdown">WUFI</span>
+                                                            <div class="ms-4">
+                                                                <img src="images/icons/arrow-d.png" class="img-fluid" width="15px">
+                                                            </div>
+                                                        </button>
+                                                        <div class="dropdown-menu p-3 bg-dark lh-lg" style="width: 200px;" aria-labelledby="imageDropdown">
+                                                            <ul>
+                                                                <li>
+                                                                    <a class="dropdown-item p-0 d-flex align-items-center gap-2" href="#" 
+                                                                        onclick="selectItem( 'images/logo.png', 'WUFI')" id="item1">
+                                                                        <img src="images/logo.png" width="22px" class="img-fluid">
+                                                                        <span class="fs-14 text-white">WUFI</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item p-0 d-flex align-items-center gap-2" href="#" 
+                                                                        onclick="selectItem( 'images/im-11.png', 'Doge')" id="item2">
+                                                                        <img src="images/im-11.png" width="16px" class="img-fluid">
+                                                                        <span class="fs-14 text-white">Doge</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <input type="text" class="form-control text-end fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                            </div>
+                                            <p class="fs-14 text-light-ind mt-1 m-0 text-end">
+                                                Not transferable: 500
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div>
+                                            <label class="fs-6 mb-2 fw-semibold text-light-ind">Receive (Estimated)</label>
+                                            <div class="input-group bg-input-glass">
+                                                <span class="input-group-text bg-transparent border-0 p-0 pe-2" id="basic-addon1">
+                                                    <div class="dropdown dropcust">
+                                                        <button class="border-0 bg-transparent d-flex gap-2 align-items-center" type="button" id="" data-bs-toggle="dropdown" aria-bs-haspopup="true" aria-bs-expanded="false" aria-expanded="false">
+                                                            <img src="images/im-11.png" class="img-fluid" width="16px" id="selectedItemImage">
+                                                            <span class="fs-14 text-white" id="imageDropdown">Doge</span>
+                                                            <div class="ms-4">
+                                                                <img src="images/icons/arrow-d.png" class="img-fluid" width="15px">
+                                                            </div>
+                                                        </button>
+                                                        <div class="dropdown-menu p-3 bg-dark lh-lg" style="width: 200px;" aria-labelledby="imageDropdown">
+                                                            <ul>
+                                                                <li>
+                                                                    <a class="dropdown-item p-0 d-flex align-items-center gap-2" href="#" 
+                                                                        onclick="selectItem1( 'images/logo.png', 'WUFI')" id="item1">
+                                                                        <img src="images/logo.png" width="22px" class="img-fluid">
+                                                                        <span class="fs-14 text-white">WUFI</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="dropdown-item p-0 d-flex align-items-center gap-2" href="#" 
+                                                                        onclick="selectItem1( 'images/im-11.png', 'Doge')" id="item2">
+                                                                        <img src="images/im-11.png" width="16px" class="img-fluid">
+                                                                        <span class="fs-14 text-white">Doge</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <input type="text" class="form-control text-end fs-5 fw-semibold border-0 bg-transparent" placeholder="0">
+                                            </div>
+                                            <p class="fs-14 text-light-ind mt-1 mb-0 text-end">
+                                                Available: 1,200
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-center gap-2">
+                                            <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                                1 WUFI = 1.9 DOGE
+                                            </p>
+                                            <a href="#">
+                                                <img src="images/icons/refresh.png" class="img-fluid" width="24px">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-center">
+                                            <a href="swap.html" class="btncust px-4 text-btn1-color btn-bg-1 bg-glass-1-size h-59 text-capitalize border-0 rounded-5 px-4 text-decoration-none fs-14 text-capitalize fw-semibold">
+                                                Swap
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <hr class="my-0 text-white" />
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="d-flex align-items-center justify-content-between gap-2">
+                                            <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                                Price impact
+                                            </p>
+                                            <p class="fs-14 text-white fw-semibold m-0">
+                                                1%
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mt-1">
+                                            <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                                <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                                    Service fees
+                                                </p>
+                                                <p class="fs-14 text-white fw-semibold m-0">
+                                                    1% <span class="text-light-green">DOGE 2.8</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                                                <p class="fs-14 m-0 text-light-ind fw-semibold">
+                                                    LP fees
+                                                </p>
+                                                <p class="fs-14 text-white fw-semibold m-0">
+                                                    1% <span class="text-light-green">DOGE 2.8</span>
+                                                </p>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="mt-5">
+                            <h3 class="text-white fs-3 fw-semibold mb-4">Transaction history</h3>
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead class="text-white">
+                                        <th class="pb-3">
+                                            <span class="text-nowrap fs-6 fw-semibold">Action</span>
+                                        </th>
+                                        <th class="text-center">
+                                            <span class="text-nowrap fs-6 fw-semibold">WUFI</span>
+                                        </th>
+                                        <th class="text-center">
+                                            <span class="text-nowrap fs-6 fw-semibold">DOGE</span>
+                                        </th>
+                                        <th class="text-center">
+                                            <span class="text-nowrap fs-6 fw-semibold">Price</span>
+                                        </th>
+                                        <th class="text-center">
+                                            <span class="text-nowrap fs-6 fw-semibold">Status</span>
+                                        </th>
+                                        <th class="text-center">
+                                            <span class="text-nowrap fs-6 fw-semibold">Date</span>
+                                        </th>
+                                        <th class="text-center">
+                                            <span class="text-nowrap fs-6 fw-semibold">Address</span>
+                                        </th>
+                                        <th class="text-center">
+                                            <span class="text-nowrap fs-6 fw-semibold">TxID</span>
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom border-white">
+                                            <td style="width:200px" class="py-3">
+                                                <span class="fs-14 text-white">
+                                                    Buy
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    1,000
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    1,000
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Đ 1.4
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Processing
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    21.02 2:23 
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Link
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Link
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-bottom border-white">
+                                            <td style="width:200px" class="py-3">
+                                                <span class="fs-14 text-white">
+                                                    Buy
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    1,000
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    1,000
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Đ 1.4
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Processing
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    21.02 2:23 
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Link
+                                                </span>
+                                            </td>
+                                            <td style="width:200px" class="py-3 text-center">
+                                                <span class="fs-14 text-white">
+                                                    Link
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- js area -->
+    <div class="modal fade" id="alertmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-black border-color-gray">
+                <div class="modal-body text-center pt-5">
+                    <h1 class="text-capitalize fs-4 mb-4 text-white">complete transaction</h1>
+                    <p class="text-white lh-base">
+                        Insufficient balance, please try again with lower amount!
+                    </p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btncust text-nowrap border fs-14 text-orange fw-bold border-color-gray d-inline-flex rounded-5 px-5 text-decoration-none text-capitalize" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <!-- custom js -->
+
+
+    <script>
+      function selectItem(imgSrc, item) {
+        document.getElementById("selectedItemImage").src = imgSrc;
+        document.getElementById("imageDropdown").textContent = item;
+      }
+    </script>
+    <script type="text/javascript">
+    var buttons = document.querySelectorAll('.tags ul li button');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+    </script>
+
+    <script type="text/javascript">
+        function MyRefresh() {
+            let swapId = document.getElementById('swap')
+            swapId.classList.toggle("flex-row-reverse");
+        }
+    </script>
+
+    <script>
+    am5.ready(function() {
+
+        // Create root element
+        // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+        var root = am5.Root.new("chartdiv");
+        root._logo.dispose();
+
+        var myTheme = am5.Theme.new(root);
+
+        myTheme.rule("Label").setAll({
+            fill: am5.color(0xffffff),
+        });
+
+        // Set themes
+        // https://www.amcharts.com/docs/v5/concepts/themes/
+        root.setThemes([
+            am5themes_Animated.new(root),
+            myTheme
+        ]);
+
+        root.dateFormatter.setAll({
+            dateFormat: "yyyy",
+            dateFields: ["valueX"]
+        });
+
+        var data = [{
+            "date": "2012-07-27",
+            "value": 13
+        }, {
+            "date": "2012-07-28",
+            "value": 11
+        }, {
+            "date": "2012-07-29",
+            "value": 15
+        }, {
+            "date": "2012-07-30",
+            "value": 16
+        }, {
+            "date": "2012-07-31",
+            "value": 18
+        }, {
+            "date": "2012-08-01",
+            "value": 13
+        }, {
+            "date": "2012-08-02",
+            "value": 22
+        }, {
+            "date": "2012-08-03",
+            "value": 23
+        }, {
+            "date": "2012-08-04",
+            "value": 20
+        }, {
+            "date": "2012-08-05",
+            "value": 17
+        }, {
+            "date": "2012-08-06",
+            "value": 16
+        }, {
+            "date": "2012-08-07",
+            "value": 18
+        }, {
+            "date": "2012-08-08",
+            "value": 21
+        }, {
+            "date": "2012-08-09",
+            "value": 26
+        }, {
+            "date": "2012-08-10",
+            "value": 24
+        }, {
+            "date": "2012-08-11",
+            "value": 29
+        }, {
+            "date": "2012-08-12",
+            "value": 32
+        }, {
+            "date": "2012-08-13",
+            "value": 18
+        }, {
+            "date": "2012-08-14",
+            "value": 24
+        }, {
+            "date": "2012-08-15",
+            "value": 22
+        }, {
+            "date": "2012-08-16",
+            "value": 18
+        }, {
+            "date": "2012-08-17",
+            "value": 19
+        }, {
+            "date": "2012-08-18",
+            "value": 14
+        }, {
+            "date": "2012-08-19",
+            "value": 15
+        }, {
+            "date": "2012-08-20",
+            "value": 12
+        }, {
+            "date": "2012-08-21",
+            "value": 8
+        }, {
+            "date": "2012-08-22",
+            "value": 9
+        }, {
+            "date": "2012-08-23",
+            "value": 8
+        }, {
+            "date": "2012-08-24",
+            "value": 7
+        }, {
+            "date": "2012-08-25",
+            "value": 5
+        }, {
+            "date": "2012-08-26",
+            "value": 11
+        }, {
+            "date": "2012-08-27",
+            "value": 13
+        }, {
+            "date": "2012-08-28",
+            "value": 18
+        }, {
+            "date": "2012-08-29",
+            "value": 20
+        }, {
+            "date": "2012-08-30",
+            "value": 29
+        }, {
+            "date": "2012-08-31",
+            "value": 33
+        }, {
+            "date": "2012-09-01",
+            "value": 42
+        }, {
+            "date": "2012-09-02",
+            "value": 35
+        }, {
+            "date": "2012-09-03",
+            "value": 31
+        }, {
+            "date": "2012-09-04",
+            "value": 47
+        }, {
+            "date": "2012-09-05",
+            "value": 52
+        }, {
+            "date": "2012-09-06",
+            "value": 46
+        }, {
+            "date": "2012-09-07",
+            "value": 41
+        }, {
+            "date": "2012-09-08",
+            "value": 43
+        }, {
+            "date": "2012-09-09",
+            "value": 40
+        }, {
+            "date": "2012-09-10",
+            "value": 39
+        }, {
+            "date": "2012-09-11",
+            "value": 34
+        }, {
+            "date": "2012-09-12",
+            "value": 29
+        }, {
+            "date": "2012-09-13",
+            "value": 34
+        }, {
+            "date": "2012-09-14",
+            "value": 37
+        }, {
+            "date": "2012-09-15",
+            "value": 42
+        }, {
+            "date": "2012-09-16",
+            "value": 49
+        }, {
+            "date": "2012-09-17",
+            "value": 46
+        }, {
+            "date": "2012-09-18",
+            "value": 47
+        }, {
+            "date": "2012-09-19",
+            "value": 55
+        }, {
+            "date": "2012-09-20",
+            "value": 59
+        }, {
+            "date": "2012-09-21",
+            "value": 58
+        }, {
+            "date": "2012-09-22",
+            "value": 57
+        }, {
+            "date": "2012-09-23",
+            "value": 61
+        }, {
+            "date": "2012-09-24",
+            "value": 59
+        }, {
+            "date": "2012-09-25",
+            "value": 67
+        }, {
+            "date": "2012-09-26",
+            "value": 65
+        }, {
+            "date": "2012-09-27",
+            "value": 61
+        }, {
+            "date": "2012-09-28",
+            "value": 66
+        }, {
+            "date": "2012-09-29",
+            "value": 69
+        }, {
+            "date": "2012-09-30",
+            "value": 71
+        }, {
+            "date": "2012-10-01",
+            "value": 67
+        }, {
+            "date": "2012-10-02",
+            "value": 63
+        }, {
+            "date": "2012-10-03",
+            "value": 46
+        }, {
+            "date": "2012-10-04",
+            "value": 32
+        }, {
+            "date": "2012-10-05",
+            "value": 21
+        }, {
+            "date": "2012-10-06",
+            "value": 18
+        }, {
+            "date": "2012-10-07",
+            "value": 21
+        }, {
+            "date": "2012-10-08",
+            "value": 28
+        }, {
+            "date": "2012-10-09",
+            "value": 27
+        }, {
+            "date": "2012-10-10",
+            "value": 36
+        }, {
+            "date": "2012-10-11",
+            "value": 33
+        }, {
+            "date": "2012-10-12",
+            "value": 31
+        }, {
+            "date": "2012-10-13",
+            "value": 30
+        }, {
+            "date": "2012-10-14",
+            "value": 34
+        }, {
+            "date": "2012-10-15",
+            "value": 38
+        }, {
+            "date": "2012-10-16",
+            "value": 37
+        }, {
+            "date": "2012-10-17",
+            "value": 44
+        }, {
+            "date": "2012-10-18",
+            "value": 49
+        }, {
+            "date": "2012-10-19",
+            "value": 53
+        }, {
+            "date": "2012-10-20",
+            "value": 57
+        }, {
+            "date": "2012-10-21",
+            "value": 60
+        }, {
+            "date": "2012-10-22",
+            "value": 61
+        }, {
+            "date": "2012-10-23",
+            "value": 69
+        }, {
+            "date": "2012-10-24",
+            "value": 67
+        }, {
+            "date": "2012-10-25",
+            "value": 72
+        }, {
+            "date": "2012-10-26",
+            "value": 77
+        }, {
+            "date": "2012-10-27",
+            "value": 75
+        }, {
+            "date": "2012-10-28",
+            "value": 70
+        }, {
+            "date": "2012-10-29",
+            "value": 72
+        }, {
+            "date": "2012-10-30",
+            "value": 70
+        }, {
+            "date": "2012-10-31",
+            "value": 72
+        }, {
+            "date": "2012-11-01",
+            "value": 73
+        }, {
+            "date": "2012-11-02",
+            "value": 67
+        }, {
+            "date": "2012-11-03",
+            "value": 68
+        }, {
+            "date": "2012-11-04",
+            "value": 65
+        }, {
+            "date": "2012-11-05",
+            "value": 71
+        }, {
+            "date": "2012-11-06",
+            "value": 75
+        }, {
+            "date": "2012-11-07",
+            "value": 74
+        }, {
+            "date": "2012-11-08",
+            "value": 71
+        }, {
+            "date": "2012-11-09",
+            "value": 76
+        }, {
+            "date": "2012-11-10",
+            "value": 77
+        }, {
+            "date": "2012-11-11",
+            "value": 81
+        }, {
+            "date": "2012-11-12",
+            "value": 83
+        }, {
+            "date": "2012-11-13",
+            "value": 80
+        }, {
+            "date": "2012-11-14",
+            "value": 81
+        }, {
+            "date": "2012-11-15",
+            "value": 87
+        }, {
+            "date": "2012-11-16",
+            "value": 82
+        }, {
+            "date": "2012-11-17",
+            "value": 86
+        }, {
+            "date": "2012-11-18",
+            "value": 80
+        }, {
+            "date": "2012-11-19",
+            "value": 87
+        }, {
+            "date": "2012-11-20",
+            "value": 83
+        }, {
+            "date": "2012-11-21",
+            "value": 85
+        }, {
+            "date": "2012-11-22",
+            "value": 84
+        }, {
+            "date": "2012-11-23",
+            "value": 82
+        }, {
+            "date": "2012-11-24",
+            "value": 73
+        }, {
+            "date": "2012-11-25",
+            "value": 71
+        }, {
+            "date": "2012-11-26",
+            "value": 75
+        }, {
+            "date": "2012-11-27",
+            "value": 79
+        }, {
+            "date": "2012-11-28",
+            "value": 70
+        }, {
+            "date": "2012-11-29",
+            "value": 73
+        }, {
+            "date": "2012-11-30",
+            "value": 61
+        }, {
+            "date": "2012-12-01",
+            "value": 62
+        }, {
+            "date": "2012-12-02",
+            "value": 66
+        }, {
+            "date": "2012-12-03",
+            "value": 65
+        }, {
+            "date": "2012-12-04",
+            "value": 73
+        }, {
+            "date": "2012-12-05",
+            "value": 79
+        }, {
+            "date": "2012-12-06",
+            "value": 78
+        }, {
+            "date": "2012-12-07",
+            "value": 78
+        }, {
+            "date": "2012-12-08",
+            "value": 78
+        }, {
+            "date": "2012-12-09",
+            "value": 74
+        }, {
+            "date": "2012-12-10",
+            "value": 73
+        }, {
+            "date": "2012-12-11",
+            "value": 75
+        }, {
+            "date": "2012-12-12",
+            "value": 70
+        }, {
+            "date": "2012-12-13",
+            "value": 77
+        }, {
+            "date": "2012-12-14",
+            "value": 67
+        }, {
+            "date": "2012-12-15",
+            "value": 62
+        }, {
+            "date": "2012-12-16",
+            "value": 64
+        }, {
+            "date": "2012-12-17",
+            "value": 61
+        }, {
+            "date": "2012-12-18",
+            "value": 59
+        }, {
+            "date": "2012-12-19",
+            "value": 53
+        }, {
+            "date": "2012-12-20",
+            "value": 54
+        }, {
+            "date": "2012-12-21",
+            "value": 56
+        }, {
+            "date": "2012-12-22",
+            "value": 59
+        }, {
+            "date": "2012-12-23",
+            "value": 58
+        }, {
+            "date": "2012-12-24",
+            "value": 55
+        }, {
+            "date": "2012-12-25",
+            "value": 52
+        }, {
+            "date": "2012-12-26",
+            "value": 54
+        }, {
+            "date": "2012-12-27",
+            "value": 50
+        }, {
+            "date": "2012-12-28",
+            "value": 50
+        }, {
+            "date": "2012-12-29",
+            "value": 51
+        }, {
+            "date": "2012-12-30",
+            "value": 52
+        }, {
+            "date": "2012-12-31",
+            "value": 58
+        }, {
+            "date": "2013-01-01",
+            "value": 60
+        }, {
+            "date": "2013-01-02",
+            "value": 67
+        }, {
+            "date": "2013-01-03",
+            "value": 64
+        }, {
+            "date": "2013-01-04",
+            "value": 66
+        }, {
+            "date": "2013-01-05",
+            "value": 60
+        }, {
+            "date": "2013-01-06",
+            "value": 63
+        }, {
+            "date": "2013-01-07",
+            "value": 61
+        }, {
+            "date": "2013-01-08",
+            "value": 60
+        }, {
+            "date": "2013-01-09",
+            "value": 65
+        }, {
+            "date": "2013-01-10",
+            "value": 75
+        }, {
+            "date": "2013-01-11",
+            "value": 77
+        }, {
+            "date": "2013-01-12",
+            "value": 78
+        }, {
+            "date": "2013-01-13",
+            "value": 70
+        }, {
+            "date": "2013-01-14",
+            "value": 70
+        }, {
+            "date": "2013-01-15",
+            "value": 73
+        }, {
+            "date": "2013-01-16",
+            "value": 71
+        }, {
+            "date": "2013-01-17",
+            "value": 74
+        }, {
+            "date": "2013-01-18",
+            "value": 78
+        }, {
+            "date": "2013-01-19",
+            "value": 85
+        }, {
+            "date": "2013-01-20",
+            "value": 82
+        }, {
+            "date": "2013-01-21",
+            "value": 83
+        }, {
+            "date": "2013-01-22",
+            "value": 88
+        }, {
+            "date": "2013-01-23",
+            "value": 85
+        }, {
+            "date": "2013-01-24",
+            "value": 85
+        }, {
+            "date": "2013-01-25",
+            "value": 80
+        }, {
+            "date": "2013-01-26",
+            "value": 87
+        }, {
+            "date": "2013-01-27",
+            "value": 84
+        }, {
+            "date": "2013-01-28",
+            "value": 83
+        }, {
+            "date": "2013-01-29",
+            "value": 84
+        }, {
+            "date": "2013-01-30",
+            "value": 81
+        }];
+
+
+        // Create chart
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/
+        var chart = root.container.children.push(am5xy.XYChart.new(root, {
+            focusable: true,
+            panX: true,
+            panY: true,
+            wheelX: "panX",
+            wheelY: "zoomX",
+            pinchZoomX: true,
+            paddingLeft: 0
+        }));
+
+        var easing = am5.ease.linear;
+
+
+        // Create axes
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+        var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
+            maxDeviation: 0.1,
+            groupData: false,
+            baseInterval: {
+                timeUnit: "day",
+                count: 1
+            },
+            renderer: am5xy.AxisRendererX.new(root, {
+                minorGridEnabled: true,
+                minGridDistance: 70
+            }),
+            tooltip: am5.Tooltip.new(root, {})
+        }));
+
+        var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+            maxDeviation: 0.2,
+            renderer: am5xy.AxisRendererY.new(root, {})
+        }));
+
+
+        // Add series
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+        var series = chart.series.push(am5xy.LineSeries.new(root, {
+            minBulletDistance: 10,
+            connect: false,
+            xAxis: xAxis,
+            yAxis: yAxis,
+            valueYField: "value",
+            valueXField: "date",
+            tooltip: am5.Tooltip.new(root, {
+                pointerOrientation: "horizontal",
+                labelText: "{valueY}"
+            })
+        }));
+
+        series.set("fill", am5.color(0x33886E));
+        series.set("stroke", am5.color(0x1AEFAF));
+        series.set("labelText", '[#fff]');
+
+        series.fills.template.setAll({
+            fillOpacity: 1,
+            visible: true,
+        });
+
+        series.strokes.template.setAll({
+            strokeWidth: 2,
+        });
+
+
+
+        // Set up data processor to parse string dates
+        // https://www.amcharts.com/docs/v5/concepts/data/#Pre_processing_data
+        series.data.processor = am5.DataProcessor.new(root, {
+            dateFormat: "yyyy-MM-dd",
+            dateFields: ["date"]
+        });
+
+        series.data.setAll(data);
+
+        series.bullets.push(function() {
+            var circle = am5.Circle.new(root, {
+                radius: 4,
+                fill: root.interfaceColors.get("background"),
+                stroke: series.get("fill"),
+                strokeWidth: 2,
+            })
+
+            return am5.Bullet.new(root, {
+                sprite: circle
+            })
+        });
+
+
+        // Add cursor
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
+        var cursor = chart.set("cursor", am5xy.XYCursor.new(root, {
+            xAxis: xAxis,
+            behavior: "none"
+        }));
+        cursor.lineY.set("visible", false);
+
+
+        // Make stuff animate on load
+        // https://www.amcharts.com/docs/v5/concepts/animations/
+        chart.appear(1000, 100);
+
+    }); // end am5.ready()
+    </script>
+</body>
+
+</html>

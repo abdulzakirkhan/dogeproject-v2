@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Builders V2 || Wufiswap V2</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<style>
+    .h-120 {
+    height: 120% ;
+}
+</style>
+
+<body>
+    <header class="position-relative">
+        <nav class="navbar navbar-expand-xl p-0 bg-light bg-transparent d-flex justify-content-center">
+            <div class="width-93 d-flex justify-content-between">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <img src="images/logo.png" class="img-fluid" width="100px">
+                    <span class="text-white fs-26">
+                        Wufiswap
+                    </span>
+                </a>
+                <button class="border-0 bg-transparent d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarmenu" aria-controls="sidebarmenu">
+                    <img src="images/icons/menu.png" class="img-fluid" width="35px">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="swap.html">Swap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="farm.html">Farm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard.html">Manage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="launchpad.html">Launchpad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="builders.html">Builders</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex gap-4 align-items-center ps-3" role="search">
+                        <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            connect wallet
+                        </button>
+                        <a href="https://twitter.com/Wufiswap">
+                            <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                        </a>
+                        <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                            <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- alert window start -->
+        <div class="offcanvas bg-transparent p-0 position-absolute top-50 start-50 translate-middle-x w-75 mx-auto" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="alert alert-primary text-black fs-14 border-0 bg-white" role="alert">
+                Please install DogeLabs Wallet to connect!
+            </div>
+        </div>
+        <!-- alert window end -->
+    </header>
+    <!-- mobile menu start -->
+    <div class="offcanvas offcanvas-start bg-black" data-bs-scroll="true" tabindex="-1" id="sidebarmenu" aria-labelledby="sidebarmenu">
+        <div class="offcanvas-header">
+            <div class="d-flex align-items-center gap-3">
+                <img src="images/logo.png" class="img-fluid" width="80px">
+                <span class="text-white">
+                    Wufiswap
+                </span>
+            </div>
+            <button type="button" class="bg-transparent border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="images/icons/close.png" class="img-fluid" width="33px">
+            </button>
+        </div>
+        <div class="offcanvas-body py-5">
+            <ul class="navbar-nav text-center py-5 flex-column gap-3 w-100">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="swap.html">Swap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="farm.html">Farm</a>
+                </li>                
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="dashboard.html">Manage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="launchpad.html">Launchpad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white active" href="builders.html">Builders</a>
+                </li>
+            </ul>
+            <form class="d-flex flex-column gap-4 align-items-center" role="search">
+                <button class="btncust px-4 text-btn1-color btn-bg-1 bg-orange text-capitalize border-0 rounded-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    connect wallet
+                </button>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                    <a href="https://twitter.com/Wufiswap">
+                        <img src="images/icons/twitter.png" class="img-fluid" width="24px">
+                    </a>
+                    <a href="https://t.me/+LY7urXXE4rhhNjA0">
+                        <img src="images/icons/discord.png" class="img-fluid" width="24px">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- mobile menu end -->
+    <main>
+        <section class="mt-5">
+            <div class="d-flex justify-content-center mb-5">
+                <div class="width-93">
+                    <div class="mb-5">
+                        <h1 class="fs-50 text-shadow text-white mb-3">Builder</h1>
+                        <p class="text-white fs-14">Create your project here</p>
+                    </div>
+                    <div class="row g-5 mt-5">
+                        <div class="col-md-4 pt-5">
+                            <div class="card card-body-img bg-transparent h-120">
+                                <div class="card-header header-bg p-3">
+                                    <h5 class="m-0 text-white fs-25">SWAP</h5>
+                                </div>
+                                <div class="card-body text-center pt-3">
+                                    <div>
+                                        <img src="images/card-icon-img.png" alt="" class="img-fluid" width="191px" style="opacity: .2" />
+                                    </div>
+                                    <p class="text-center text-white pt-4 fs-14 lh-base px-5">
+                                        Create your own ligquidity pool
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pb-4">
+                                    <div class="text-center">
+                                        <a class="btncust d-inline-flex px-4 btn-bg-1 rounded-5 border-0 text-decoration-none text-white fs-14" href="create-pair.html">Create a pair</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pt-5">
+                            <div class="card card-body-img bg-transparent h-120">
+                                <div class="card-header header-bg p-3">
+                                    <h5 class="m-0 text-white fs-25">STAKING</h5>
+                                </div>
+                                <div class="card-body text-center pt-3">
+                                    <div>
+                                        <img src="images/card-icon-img2.png" alt="" class="img-fluid" width="140px" style="opacity: .2" />
+                                    </div>
+                                    <p class="text-center text-white fs-14 pt-3 lh-base px-5">
+                                        Incentivize your holders with a personnalized staking system
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pb-4">
+                                    <div class="text-center">
+                                        <a class="btncust d-inline-flex px-4 btn-bg-1 rounded-5 border-0 text-decoration-none text-white fs-14" href="create-staking-pool.html">Create a staking pool</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pt-5">
+                            <div class="card card-body-img bg-transparent h-120">
+                                <div class="card-header header-bg p-3">
+                                    <h5 class="m-0 text-white fs-25">LAUNCHPAD</h5>
+                                </div>
+                                <div class="card-body text-center pt-3">
+                                    <div>
+                                        <img src="images/card-icon-img3.png" alt="" class="img-fluid" width="140px" style="opacity: .2" />
+                                    </div>
+                                    <p class="text-center text-white pt-3 fs-14 lh-base px-5">
+                                        Launch your top quality project with the support of SWUFI community
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pb-4">
+                                    <div class="text-center">
+                                        <a class="btncust d-inline-flex fs-14 px-4 btn-bg-1 rounded-5 border-0 text-decoration-none text-white" href="https://docs.google.com/forms/d/e/1FAIpQLSftsiAzBTflmny63wtVDz18o8XXDpHy_sXqc3gso2ZgU146tw/viewform">Apply for a lunch</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
